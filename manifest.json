@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "UC Style Downloader",
+  "version": "1.0",
+  "description": "Auto detect videos and show download button",
+  "permissions": ["downloads", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
